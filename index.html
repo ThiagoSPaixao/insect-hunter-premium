@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insect Hunter | Premium Edition</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader"></div>
+        <p>CARREGANDO...</p>
+    </div>
+
+    <!-- Main Menu Screen -->
+    <div class="screen menu-screen active" id="menuScreen">
+        <div class="particles" id="particles"></div>
+        <div class="menu-content">
+            <h1 class="glitch" data-text="INSECT HUNTER">INSECT HUNTER</h1>
+            <p class="subtitle">PREMIUM EDITION</p>
+            <div class="menu-buttons">
+                <button class="premium-btn" id="playBtn">
+                    <i class="fas fa-play"></i>
+                    <span>Jogar</span>
+                </button>
+                <button class="premium-btn" id="rankingBtn">
+                    <i class="fas fa-trophy"></i>
+                    <span>Ranking</span>
+                </button>
+                <button class="premium-btn" id="settingsBtn">
+                    <i class="fas fa-cog"></i>
+                    <span>Configurações</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Insect Selection Screen -->
+    <div class="screen selection-screen" id="selectionScreen">
+        <h2 class="section-title">ESCOLHA <span class="accent">SUA PRESA</span></h2>
+        <div class="insects-grid">
+            <div class="insect-card" data-insect="fly">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <i class="fas fa-bug"></i>
+                        <h3>Mosca</h3>
+                    </div>
+                    <div class="card-back">
+                        <img src="http://pngimg.com/uploads/fly/fly_PNG3946.png" alt="fly">
+                        <p>Velocidade: ⭐⭐⭐</p>
+                        <p>Pontos: +10</p>
+                    </div>
+                </div>
+            </div>
+            <div class="insect-card" data-insect="mosquito">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <i class="fas fa-mosquito"></i>
+                        <h3>Mosquito</h3>
+                    </div>
+                    <div class="card-back">
+                        <img src="http://pngimg.com/uploads/mosquito/mosquito_PNG18175.png" alt="mosquito">
+                        <p>Velocidade: ⭐⭐⭐⭐</p>
+                        <p>Pontos: +15</p>
+                    </div>
+                </div>
+            </div>
+            <div class="insect-card" data-insect="spider">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <i class="fas fa-spider"></i>
+                        <h3>Aranha</h3>
+                    </div>
+                    <div class="card-back">
+                        <img src="http://pngimg.com/uploads/spider/spider_PNG12.png" alt="spider">
+                        <p>Velocidade: ⭐⭐</p>
+                        <p>Pontos: +20</p>
+                    </div>
+                </div>
+            </div>
+            <div class="insect-card" data-insect="roach">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <i class="fas fa-bug"></i>
+                        <h3>Barata</h3>
+                    </div>
+                    <div class="card-back">
+                        <img src="http://pngimg.com/uploads/roach/roach_PNG12163.png" alt="roach">
+                        <p>Velocidade: ⭐⭐⭐⭐⭐</p>
+                        <p>Pontos: +25</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="back-btn" id="backFromSelection">
+            <i class="fas fa-arrow-left"></i> Voltar
+        </button>
+    </div>
+
+    <!-- Game Screen -->
+    <div class="screen game-screen" id="gameScreen">
+        <div class="game-header">
+            <div class="hud-card">
+                <i class="fas fa-clock"></i>
+                <span id="gameTime">00:00</span>
+            </div>
+            <div class="hud-card">
+                <i class="fas fa-bolt"></i>
+                <span id="gameScore">0</span>
+            </div>
+            <div class="hud-card">
+                <i class="fas fa-bomb"></i>
+                <span id="gameCombo">x1</span>
+            </div>
+        </div>
+
+        <div class="pause-menu" id="pauseMenu">
+            <h2>JOGO PAUSADO</h2>
+            <div class="pause-buttons">
+                <button class="premium-btn small" id="resumeBtn">
+                    <i class="fas fa-play"></i> Continuar
+                </button>
+                <button class="premium-btn small" id="restartBtn">
+                    <i class="fas fa-redo"></i> Reiniciar
+                </button>
+                <button class="premium-btn small" id="menuBtn">
+                    <i class="fas fa-home"></i> Menu
+                </button>
+            </div>
+        </div>
+
+        <div class="game-area" id="gameArea"></div>
+    </div>
+
+    <!-- Ranking Screen -->
+    <div class="screen ranking-screen" id="rankingScreen">
+        <h2 class="section-title">MELHORES <span class="accent">PONTUAÇÕES</span></h2>
+        <div class="ranking-list" id="rankingList"></div>
+        <button class="back-btn" id="backFromRanking">
+            <i class="fas fa-arrow-left"></i> Voltar
+        </button>
+    </div>
+
+    <!-- Settings Screen -->
+    <div class="screen settings-screen" id="settingsScreen">
+        <h2 class="section-title">CONFIGURAÇÕES</h2>
+        <div class="settings-container">
+            <div class="setting-item">
+                <span><i class="fas fa-volume-up"></i> Efeitos Sonoros</span>
+                <label class="switch">
+                    <input type="checkbox" id="soundToggle" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="setting-item">
+                <span><i class="fas fa-music"></i> Música</span>
+                <label class="switch">
+                    <input type="checkbox" id="musicToggle" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="setting-item">
+                <span><i class="fas fa-tachometer-alt"></i> Dificuldade</span>
+                <select id="difficultySelect">
+                    <option value="easy">Fácil</option>
+                    <option value="normal" selected>Normal</option>
+                    <option value="hard">Difícil</option>
+                </select>
+            </div>
+        </div>
+        <button class="back-btn" id="backFromSettings">
+            <i class="fas fa-arrow-left"></i> Voltar
+        </button>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div class="modal" id="gameOverModal">
+        <div class="modal-content">
+            <h2>GAME OVER</h2>
+            <div class="final-stats">
+                <p>Pontuação: <span id="finalScore">0</span></p>
+                <p>Tempo: <span id="finalTime">00:00</span></p>
+                <p>Combo Máx: <span id="finalCombo">x1</span></p>
+            </div>
+            <div class="modal-buttons">
+                <button class="premium-btn small" id="playAgainBtn">
+                    <i class="fas fa-redo"></i> Jogar Novamente
+                </button>
+                <button class="premium-btn small" id="menuFromGameOver">
+                    <i class="fas fa-home"></i> Menu
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
