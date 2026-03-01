@@ -65,3 +65,103 @@ cd insect-hunter-premium
 # Abra no navegador (pode usar Live Server)
 open index.html
 
+Ou simplesmente jogue online aqui (se fizer deploy no GitHub Pages).
+
+🎮 Controles
+Tecla	Ação
+Mouse	Clicar nos insetos
+ESC / Espaço	Pausar/Continuar
+R	Reiniciar jogo
+Clique nos cards	Escolher inseto
+⚙️ Configurações
+Efeitos Sonoros - Ativar/Desativar
+
+Música de Fundo - Ativar/Desativar
+
+Dificuldade:
+
+🟢 Fácil - Insetos mais lentos
+
+🟡 Normal - Balanceado
+
+🔴 Difícil - Insetos rápidos e muitos spawns
+
+🏆 Sistema de Ranking
+O jogo salva automaticamente as 10 melhores pontuações no seu navegador (localStorage). O ranking considera:
+
+Pontuação final
+
+Data da partida
+
+Combo máximo alcançado
+
+📱 Responsividade
+O jogo foi desenvolvido para funcionar perfeitamente em:
+
+💻 Desktops (1920x1080)
+
+💻 Notebooks (1366x768)
+
+📱 Tablets (768x1024)
+
+📱 Smartphones (375x667)
+
+🎨 Design Premium
+Efeito Glitch no título principal
+
+Cards 3D invertíveis na seleção de insetos
+
+Partículas animadas no fundo
+
+Pontos flutuantes ao capturar insetos
+
+Efeitos de hover suaves
+
+Animações de combo vibrantes
+
+Menu de pausa estilizado
+
+Modal de Game Over com estatísticas
+
+🗂️ Estrutura do Projeto
+text
+insect-hunter-premium/
+│
+├── index.html          # Estrutura principal
+├── style.css           # Estilos premium
+├── script.js           # Lógica do jogo (POO)
+├── screenshot.png      # Screenshot do jogo
+└── README.md          # Documentação
+🤝 Contribuições
+Contribuições são bem-vindas! Siga estes passos:
+
+Fork o projeto
+
+Crie sua branch (git checkout -b feature/AmazingFeature)
+
+Commit suas mudanças (git commit -m 'Add some AmazingFeature')
+
+Push para a branch (git push origin feature/AmazingFeature)
+
+Abra um Pull Request
+
+📝 Licença
+Distribuído sob licença MIT. Veja LICENSE para mais informações.
+
+👨‍💻 Autor
+Seu Nome
+
+GitHub: @seu-usuario
+
+LinkedIn: Seu Perfil
+
+Portfolio: seusite.com
+
+🙏 Agradecimentos
+Inspirado no jogo "Catch The Insect" original
+
+Ícones por Font Awesome
+
+Imagens por PNGIMG
+
+<div align="center"> <p>⭐️ Se você gostou, dê uma estrela no GitHub! ⭐️</p> <p>Feito com ❤️ e JavaScript puro</p> </div> ```
